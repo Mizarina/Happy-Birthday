@@ -12,14 +12,25 @@ export default function App() {
  
   const [textoAleatorio, setTextoAleatorio] = useState("")
   const aleatorias =() => {
-    let frases = ["Parabéns Painho!!!", "120 como 20", " O Senhor é D+", " Me perdoe e Eu te Amo."]
+    let frases = [, "120 como 20", " O Senhor é D+", "Eu te Amo."]
     setTextoAleatorio(frases[Math.floor(Math.random() * frases.length)]);
   }
  
   return (
     <View style={styles.container}>
       <StatusBar> </StatusBar>
-      <Text style={{color:"white", fontsize:200, margin: 150,}}>
+      <Text> 
+     Parabéns Painho
+     
+      <Text>style={{color:'white'}} </Text> 
+      
+      </Text>
+      
+      <Image source={require('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.giulianaflores.com.br%2Fplaca-feliz-aniversario%2Fp28582%2F&psig=AOvVaw3-e2U7AgbhAIJqTitl1gDo&ust=1664651609086000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCODhh8CbvfoCFQAAAAAdAAAAABAE')} />
+        resource 
+      
+      
+      <Text style={{color:"white", fontsize:1000, margin: 200,fontFamily: 'Open Sans',fontWeight: "bold"}}>
         {textoInicial}
     </Text>
      
@@ -48,4 +59,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
- 
