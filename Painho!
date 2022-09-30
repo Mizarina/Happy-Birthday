@@ -1,0 +1,51 @@
+import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button, createElement } from 'react-native';
+ 
+ 
+export default function App() {
+  const [textoInicial, setTextoInicial] = useState("");
+ 
+  const boasVindas = () => {
+   setTextoInicial("Feliz Aniversário!!");
+  }
+ 
+  const [textoAleatorio, setTextoAleatorio] = useState("")
+  const aleatorias =() => {
+    let frases = ["Parabéns Painho!!!", "120 como 20", " O Senhor é D+", " Me perdoe e Eu te Amo."]
+    setTextoAleatorio(frases[Math.floor(Math.random() * frases.length)]);
+  }
+ 
+  return (
+    <View style={styles.container}>
+      <StatusBar> </StatusBar>
+      <Text style={{color:"white", fontsize:200, margin: 150,}}>
+        {textoInicial}
+    </Text>
+     
+    <Text style={{color:"white", fontsize:70, margin: 20}}>
+        {textoAleatorio}
+    </Text>
+     
+      
+     
+      <StatusBar style="auto" />
+      <Button title='clique aqui :)' onPress={boasVindas}/>
+      <Button title= ' Pra você'onPress={aleatorias}/>
+   
+ 
+    </View>
+  );
+ 
+ 
+}
+ 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#CC7CDC',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+ 
